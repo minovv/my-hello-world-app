@@ -1,8 +1,15 @@
-const dataAttributeElement = document.querySelector("[data-test]")
-const divWithClasses = document.querySelectorAll(".div-class")
+const btn = document.querySelector("[data-btn]")
+const link = document.querySelector("a")
 
-dataAttributeElement.style.color = "green"
-divWithClasses.forEach((div) => (div.style.color = "red"))
-const input = document.querySelector("body > input[type = 'text']")
+console.log(link)
 
-console.log(divWithClasses)
+btn.addEventListener("click", () => {
+  console.log("clicked")
+})
+
+console.log(btn)
+
+link.addEventListener("click", (e) => {
+  e.preventDefault()
+  console.log("clicked")
+})
