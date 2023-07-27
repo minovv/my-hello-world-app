@@ -1,11 +1,8 @@
-const divWithId = document.getElementById("div-id")
-divWithId.style.color = "red"
+const dataAttributeElement = document.querySelector("[data-test]")
+const divWithClasses = document.querySelectorAll(".div-class")
 
-const divWithClass = document.getElementsByClassName("div-class")
+dataAttributeElement.style.color = "green"
+divWithClasses.forEach((div) => (div.style.color = "red"))
+const input = document.querySelector("body > input[type = 'text']")
 
-// divWithClass[0].style.color = "blue"
-// divWithClass[1].style.color = "purple"
-
-const divWithClassArray = Array.from(divWithClass)
-
-divWithClassArray.forEach((div) => (div.style.color = "green"))
+console.log(divWithClasses)
