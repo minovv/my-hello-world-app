@@ -1,15 +1,9 @@
-const btn = document.querySelector("[data-btn]")
-const link = document.querySelector("a")
+const buttons = document.querySelectorAll("button")
 
-console.log(link)
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const currentClicks = parseInt(button.dataset.clicks)
 
-btn.addEventListener("click", () => {
-  console.log("clicked")
-})
-
-console.log(btn)
-
-link.addEventListener("click", (e) => {
-  e.preventDefault()
-  console.log("clicked")
+    button.dataset.clicks = currentClicks + 1
+  })
 })
